@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/css/about.css">
+<div id="header-placeholder"></div>
+
+<section class="about-section" id="about">
+    <div class="section-container">
+        
+        <div class="section-header fade-in-up">
+            <span class="sub-title">Hành trình phát triển</span>
+            <h2>Về Chúng Tôi</h2>
+            <div class="title-line"></div>
+            <p class="section-desc">Tìm hiểu về GOLDEN CARGO – Nền tảng vận tải chuyển mạch toàn cầu, nơi niềm tin và chất lượng được kết nối không ngừng nghỉ.</p>
+        </div>
+
+        <div class="about-hero-grid fade-in-up">
+            <div class="about-hero-text">
+                <div class="company-badge">Công Ty TNHH GOLDEN CARGO</div>
+                <h3>Giải Pháp Vận Tải Toàn Diện <br><span>Đáp Ứng Mọi Khối Lượng Toàn Cầu</span></h3>
+                <p>GOLDEN CARGO là doanh nghiệp tiên phong chuyên đáp ứng các nhu cầu vận chuyển hàng hóa phức tạp của khách hàng toàn quốc và quốc tế. Bất kể bạn ở đâu, chỉ cần kết nối, chúng tôi luôn sẵn sàng đáp ứng với tốc độ nhanh nhất, uy tín tuyệt đối và niềm tin chất lượng vững chắc.</p>
+                <p>Bằng việc vận hành trang thiết bị hiện đại kết hợp với quy trình quản lý sản xuất chuyên nghiệp, đội ngũ kỹ thuật lành nghề của chúng tôi cam kết mang đến những dịch vụ đỉnh cao, đảm bảo chính xác tiến độ giao hàng với tối ưu hóa chi phí.</p>
+            </div>
+            
+            <div class="vision-graphic-block">
+                <div class="network-globe-box">
+                    <div class="pulse-ring ring-1"></div>
+                    <div class="pulse-ring ring-2"></div>
+                    
+                    <div class="core-node">
+                        <img src="/images/logo.png" alt="GOLDEN CARGO">
+                    </div>
+
+                    <div class="orbit-track">
+                        <div class="satellite-node" style="--i: 1;" title="Đối tác Vận tải"><i class="fa-solid fa-truck"></i></div>
+                        <div class="satellite-node" style="--i: 2;" title="Hãng tàu Chiến lược"><i class="fa-solid fa-ship"></i></div>
+                        <div class="satellite-node" style="--i: 3;" title="Cảng hàng không"><i class="fa-solid fa-plane"></i></div>
+                        <div class="satellite-node" style="--i: 4;" title="Quản lý kho bãi"><i class="fa-solid fa-warehouse"></i></div>
+                        <div class="satellite-node" style="--i: 5;" title="Chuỗi cung ứng toàn cầu"><i class="fa-solid fa-globe"></i></div>
+                        <div class="satellite-node" style="--i: 6;" title="Giải pháp số hóa"><i class="fa-solid fa-network-wired"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-values-grid">
+            <div class="about-card fade-in-up">
+                <div class="glow-mover"></div>
+                <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                <h3>Chuyên Môn Hóa</h3>
+                <p>Sự tách biệt độc lập nhưng liên kết chặt chẽ trong từng bộ phận. Mỗi mắt xích trong chuỗi cung ứng đều vận hành với độ chính xác tuyệt đối.</p>
+            </div>
+
+            <div class="about-card fade-in-up">
+                <div class="glow-mover"></div>
+                <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Trách Nhiệm Cao</h3>
+                <p>Đội ngũ giám sát kỹ thuật làm việc nghiêm túc, cẩn thận và kỷ luật thép, đảm bảo an toàn cho sản phẩm hoàn thiện đến từng chi tiết nhỏ nhất.</p>
+            </div>
+
+            <div class="about-card fade-in-up">
+                <div class="glow-mover"></div>
+                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Sáng Tạo Liên Tục</h3>
+                <p>Các bộ phận thường xuyên trao đổi, chia sẻ sáng kiến xây dựng nên một hệ sinh thái GOLDEN CARGO năng động, đột phá trong từng dự án.</p>
+            </div>
+        </div>
+
+        <div class="about-motto-banner fade-in-up">
+            <div class="motto-content">
+                <div class="motto-quote">“ Hợp tác để cùng thành công ” & “ Liên tục cải tiến ”</div>
+                <p>Sự tin tưởng và ủng hộ của khách hàng trong suốt thời gian qua là nguồn động viên to lớn trên bước đường phát triển của GOLDEN CARGO. Chúng tôi cam kết không ngừng hoàn thiện, nâng cấp cả về nhân lực lẫn vật lực để phục vụ tốt nhất, xứng đáng với niềm tin ấy.</p>
+                <div class="motto-line"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/layout/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải file header:', error));
+
+        // Tích hợp Footer
+        fetch('/layout/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải file footer:', error));
+
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const aboutCards = document.querySelectorAll('.about-card');
+            
+            aboutCards.forEach(card => {
+                const mover = card.querySelector('.glow-mover') || document.createElement('div');
+                if(!card.querySelector('.glow-mover')) {
+                    mover.classList.add('glow-mover');
+                    card.appendChild(mover);
+                }
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    mover.style.left = `${x}px`;
+                    mover.style.top = `${y}px`;
+                });
+            });
+        });
+    </script>
