@@ -8,12 +8,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
         :root {
-            --primary: #0a192f;           
-            --primary-light: #172a45;     
-            --accent: #ffb703;            
-            --text-main: #0a192f;         
-            --text-muted: #4a5568;        
-            --bg-light: #f4f7fa;          
+            --primary: #0a192f;
+            --primary-light: #172a45;
+            --accent: #ffb703;
+            --text-main: #0a192f;
+            --text-muted: #4a5568;
+            --bg-light: #f4f7fa;
             --bg-card: rgba(255, 255, 255, 0.8);
             --transition-curve: cubic-bezier(0.25, 1, 0.5, 1);
         }
@@ -152,7 +152,7 @@
     <div id="header-placeholder"></div>
 
     <div class="detail-container">
-        <a href="/dichvu.html" class="btn-back">
+        <a href="dichvu.html" class="btn-back">
             <i class="fa-solid fa-arrow-left-long"></i> Quay lại dịch vụ
         </a>
 
@@ -176,98 +176,87 @@
                 <p id="srv-highlight">Chúng tôi cam kết đảm bảo tiến độ, tối ưu hóa chi phí vận hành và đem lại sự an toàn tuyệt đối cho mọi kiện hàng.</p>
             </div>
 
-            <div class="detail-body-content" id="srv-content">
-                </div>
+            <div class="detail-body-content" id="srv-content"></div>
         </div>
     </div>
 
-    <script>
-        // Tải header dùng chung
-        fetch('/layout/header.html')
-            .then(response => response.text())
-            .then(data => { document.getElementById('header-placeholder').innerHTML = data; })
-            .catch(error => console.error('Lỗi tải header:', error));
+    <div id="footer-placeholder"></div>
 
-        // Kho cơ sở dữ liệu dịch vụ của GOLDEN CARGO
+    <script>
+        fetch('layout/header.html').then(r => r.text()).then(d => document.getElementById('header-placeholder').innerHTML = d);
+        fetch('layout/footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+
         const serviceDatabase = {
             "van-chuyen-duong-bien": {
                 title: "Vận Chuyển Đường Biển Quốc Tế",
                 tag: "Vận tải quốc tế",
                 iconClass: "fa-solid fa-ship",
-                image: "/images/dichvu/duongbien.png",
+                image: "images/dichvu/duongbien.png",
                 highlight: "Kết nối các hải cảng trung chuyển huyết mạch lớn trên toàn thế giới với mức cước ổn định.",
-                content: `<p>GOLDEN CARGO tự hào là đơn vị chuyên sâu trong lĩnh vực giao nhận và chuyển mạch hàng hóa Quốc Tế bằng đường biển. Với mạng lưới đại lý vận tải phủ rộng, các tuyến vận chuyển chính của chúng tôi kết nối chặt chẽ Việt Nam tới các khu vực trọng điểm kinh tế như <strong>Bắc Mỹ, Tây Âu, Úc, Đông Nam Á và Đông Á</strong>.</p>
-                          <p>Chúng tôi cung cấp các giải pháp vận tải toàn diện từ hàng nguyên container (FCL) cho tới hàng gom lẻ (LCL). Hợp tác trực tiếp với các liên minh hãng tàu quốc tế lớn giúp GOLDEN CARGO luôn giữ vững mức giá cước ổn định, lịch trình xuất cảng linh hoạt và hạn chế tối đa các tình trạng trễ tàu tại các cảng chuyển tải phức tạp.</p>`
+                content: `<p>GOLDEN CARGO tự hào là đơn vị chuyên sâu trong lĩnh vực giao nhận và chuyển mạch hàng hóa Quốc Tế bằng đường biển. Với mạng lưới đại lý vận tải phủ rộng, các tuyến vận chuyển chính của chúng tôi kết nối chặt chẽ Việt Nam tới các khu vực trọng điểm kinh tế như <strong>Bắc Mỹ, Tây Âu, Úc, Đông Nam Á và Đông Á</strong>.</p><p>Chúng tôi cung cấp các giải pháp vận tải toàn diện từ hàng nguyên container (FCL) cho tới hàng gom lẻ (LCL). Hợp tác trực tiếp với các liên minh hãng tàu quốc tế lớn giúp GOLDEN CARGO luôn giữ vững mức giá cước ổn định, lịch trình xuất cảng linh hoạt và hạn chế tối đa các tình trạng trễ tàu tại các cảng chuyển tải phức tạp.</p>`
             },
             "van-chuyen-hang-khong": {
                 title: "Vận Chuyển Hàng Không Tốc Độ",
                 tag: "Vận tải quốc tế",
                 iconClass: "fa-solid fa-plane",
-                image: "/images/dichvu/hangkhong.png",
+                image: "images/dichvu/hangkhong.png",
                 highlight: "Đảm bảo giữ chỗ (Space) và tải trọng ổn định ngay cả trong những mùa cao điểm khốc liệt nhất.",
-                content: `<p>Đối với các mặt hàng có giá trị cao, hàng mẫu hoặc các bưu kiện có tính chất cấp bách về thời gian, dịch vụ vận tải hàng không của GOLDEN CARGO chính là sự lựa chọn tối ưu hàng đầu cho doanh nghiệp.</p>
-                          <p>Nhờ vào mối quan hệ chiến lược lâu năm và uy tín cao với các hãng hàng không lớn trong nước và quốc tế, chúng tôi sở hữu ưu thế tuyệt đối trong việc giữ chỗ ổn định trong suốt các tháng cao điểm của thị trường. Đội ngũ kỹ thuật lành nghề tại sân bay hỗ trợ giám sát bốc xếp nghiêm ngặt, đảm bảo quy trình khai thác bưu kiện diễn ra nhanh chóng, an toàn và an ninh nghiêm ngặt.</p>`
+                content: `<p>Đối với các mặt hàng có giá trị cao, hàng mẫu hoặc các bưu kiện có tính chất cấp bách về thời gian, dịch vụ vận tải hàng không của GOLDEN CARGO chính là sự lựa chọn tối ưu hàng đầu cho doanh nghiệp.</p><p>Nhờ vào mối quan hệ chiến lược lâu năm và uy tín cao với các hãng hàng không lớn trong nước và quốc tế, chúng tôi sở hữu ưu thế tuyệt đối trong việc giữ chỗ ổn định trong suốt các tháng cao điểm của thị trường.</p>`
             },
             "dich-vu-hai-quan": {
                 title: "Dịch Vụ Đại Lý Khai Báo Hải Quan",
                 tag: "Dịch vụ hỗ trợ",
                 iconClass: "fa-solid fa-file-invoice-dollar",
-                image: "/images/dichvu/haiquan.png",
+                image: "images/dichvu/haiquan.png",
                 highlight: "Là đại lý hải quan chính thức được cấp phép, thay mặt doanh nghiệp xử lý mọi quy trình pháp lý.",
-                content: `<p>GOLDEN CARGO đã được Tổng cục Hải quan cấp phép chứng nhận hoạt động đại lý hải quan chính thức tại Việt Nam. Đây là một thế mạnh lớn giúp chúng tôi có thể đứng tên khai báo và thay mặt khách hàng giải quyết mọi thủ tục hành chính liên quan.</p>
-                          <p>Dịch vụ bao gồm: khai báo hải quan điện tử, áp mã HS code chính xác cho hàng hóa phức tạp, xin cấp giấy phép chuyên ngành, và tiến hành kiểm hóa trực tiếp tại các cảng, cửa khẩu một cách nhanh chóng. Quy trình chuẩn hóa giúp doanh nghiệp tiết kiệm tối đa thời gian thông quan, giảm thiểu chi phí lưu kho bãi (DEM/DET) ngoài ý muốn.</p>`
+                content: `<p>GOLDEN CARGO đã được Tổng cục Hải quan cấp phép chứng nhận hoạt động đại lý hải quan chính thức tại Việt Nam. Đây là một thế mạnh lớn giúp chúng tôi có thể đứng tên khai báo và thay mặt khách hàng giải quyết mọi thủ tục hành chính liên quan.</p><p>Dịch vụ bao gồm: khai báo hải quan điện tử, áp mã HS code chính xác, xin cấp giấy phép chuyên ngành, và tiến hành kiểm hóa trực tiếp tại các cảng, cửa khẩu một cách nhanh chóng.</p>`
             },
             "van-chuyen-noi-dia": {
                 title: "Vận Chuyển Nội Địa Toàn Diện",
                 tag: "Vận tải nội địa",
                 iconClass: "fa-solid fa-truck-moving",
-                image: "/images/dichvu/noidia.png",
+                image: "images/dichvu/noidia.png",
                 highlight: "Sở hữu trực tiếp đội xe vận tải container chủ động, vận hành kỉ luật, trách nhiệm cao.",
-                content: `<p>Để chuỗi cung ứng không bị đứt gãy, hệ thống vận tải nội địa của GOLDEN CARGO được đầu tư đồng bộ với đội ngũ xe tải nhỏ và xe đầu kéo container hiện đại. Chúng tôi hoàn toàn làm chủ dịch vụ trung chuyển mà không cần phụ thuộc vào bên thứ ba.</p>
-                          <p>Làm việc với tinh thần trách nhiệm và tính kỷ luật thép, đội ngũ điều xe của chúng tôi túc trực 24/7 để giám sát hành trình trực tuyến, giúp khách hàng tránh xa được các rắc rối phát sinh như chậm chuyến, thất lạc hàng hóa do thuê các đơn vị xe ngoài không rõ uy tín. Sự chủ động giúp chúng tôi cam kết thời gian giao nhận chính xác đến từng giờ.</p>`
+                content: `<p>Để chuỗi cung ứng không bị đứt gãy, hệ thống vận tải nội địa của GOLDEN CARGO được đầu tư đồng bộ với đội ngũ xe tải nhỏ và xe đầu kéo container hiện đại. Chúng tôi hoàn toàn làm chủ dịch vụ trung chuyển mà không cần phụ thuộc vào bên thứ ba.</p><p>Làm việc với tinh thần trách nhiệm và tính kỷ luật thép, đội ngũ điều xe của chúng tôi túc trực 24/7 để giám sát hành trình trực tuyến, giúp khách hàng tránh xa được các rắc rối phát sinh như chậm chuyến, thất lạc hàng hóa.</p>`
             },
             "dich-vu-kho-bai": {
                 title: "Dịch Vụ Kho Bãi Cửa Ngõ Chiến Lược",
                 tag: "Dịch vụ hỗ trợ",
                 iconClass: "fa-solid fa-warehouse",
-                image: "/images/dichvu/khobai.png",
+                image: "images/dichvu/khobai.png",
                 highlight: "Diện tích hơn 3296m² tọa lạc tại các nút giao thông cửa ngõ của TP. Hồ Chí Minh.",
-                content: `<p>Hệ thống tổng kho bãi của GOLDEN CARGO hiện có 2 cụm kho lớn với tổng diện tích vận hành khai thác đạt hơn 3296m², nằm tại vị trí chiến lược cực kỳ thuận tiện cho luồng xe tải di chuyển: Trạm thu phí Xa lộ Hà Nội và khu vực Thủ Đức.</p>
-                          <p>Vị trí đắc địa này giúp việc phân phối hàng hóa vào trung tâm thành phố hay trung chuyển ra các cụm cảng Cát Lái, cảng Phú Hữu vô cùng nhanh chóng. Hệ thống bến bãi đáp ứng hoàn hảo cho việc đóng/rút hàng container FCL, chia chọn phân loại hàng lẻ LCL và hỗ trợ lưu trữ dài hạn với chi phí lưu kho vô cùng cạnh tranh.</p>`
+                content: `<p>Hệ thống tổng kho bãi của GOLDEN CARGO hiện có 2 cụm kho lớn với tổng diện tích vận hành khai thác đạt hơn 3296m², nằm tại vị trí chiến lược cực kỳ thuận tiện cho luồng xe tải di chuyển: Trạm thu phí Xa lộ Hà Nội và khu vực Thủ Đức.</p><p>Vị trí đắc địa này giúp việc phân phối hàng hóa vào trung tâm thành phố hay trung chuyển ra các cụm cảng Cát Lái, cảng Phú Hữu vô cùng nhanh chóng.</p>`
             },
             "dich-vu-door-to-door": {
                 title: "Dịch Vụ Giao Nhận Trọn Gói Door To Door",
                 tag: "Vận tải quốc tế",
                 iconClass: "fa-solid fa-box-open",
-                image: "/images/dichvu/door.png",
+                image: "images/dichvu/door.png",
                 highlight: "Giải pháp Logistics trọn gói 'Từ kho gửi đến kho nhận' - Khách hàng không cần lo nghĩ.",
-                content: `<p>Dịch vụ trọn gói Door-to-Door của GOLDEN CARGO tích hợp đồng bộ tất cả các phương thức vận tải nội địa, hải quan và chặng quốc tế vào một quy trình duy nhất. Khách hàng chỉ cần giao hàng tại kho gửi, mọi công tác xử lý vận hành trung chuyển phức tạp còn lại đều do chúng tôi xử lý hoàn toàn.</p>
-                          <p>Chúng tôi đảm nhận từ khâu đóng gói tiêu chuẩn, bốc xếp nội địa, thông quan hai đầu xuất-nhập cho đến việc phát hàng tận tay người nhận cuối cùng tại nước bản địa. Toàn bộ tiến độ được theo dõi qua một mã vận đơn duy nhất, giúp tối giản hóa quy trình quản lý cho doanh nghiệp.</p>`
+                content: `<p>Dịch vụ trọn gói Door-to-Door của GOLDEN CARGO tích hợp đồng bộ tất cả các phương thức vận tải nội địa, hải quan và chặng quốc tế vào một quy trình duy nhất.</p><p>Chúng tôi đảm nhận từ khâu đóng gói tiêu chuẩn, bốc xếp nội địa, thông quan hai đầu xuất-nhập cho đến việc phát hàng tận tay người nhận cuối cùng tại nước bản địa. Toàn bộ tiến độ được theo dõi qua một mã vận đơn duy nhất.</p>`
             },
             "dich-vu-di-doi": {
                 title: "Dịch Vụ Di Dời Quốc Tế & Nội Địa Trọn Gói",
                 tag: "Vận tải nội địa",
                 iconClass: "fa-solid fa-people-carry-box",
-                image: "/images/dichvu/didoi.png",
+                image: "images/dichvu/didoi.png",
                 highlight: "Thành viên chính thức của Tổ chức vận chuyển quốc tế IAM uy tín toàn cầu.",
-                content: `<p>GOLDEN CARGO cung cấp giải pháp di dời văn phòng làm việc doanh nghiệp, căn hộ cao cấp trọn gói ở quy mô nội địa cũng như di chuyển xuyên quốc gia. Là thành viên chính thức của <strong>Tổ chức vận chuyển toàn cầu IAM (International Association of Movers)</strong>, chúng tôi sở hữu mạng lưới đối tác chuyên nghiệp phủ khắp mọi quốc gia trên thế giới.</p>
-                          <p>Quy trình thực hiện bao gồm việc khảo sát khối lượng chi tiết, lập phương án bọc lót chống trầy xước bằng vật liệu chuyên dụng, tháo lắp các thiết bị công nghệ máy móc điện tử phức tạp, vận chuyển an toàn và thiết lập hoàn thiện lại tại không gian mới theo đúng yêu cầu của khách hàng.</p>`
+                content: `<p>GOLDEN CARGO cung cấp giải pháp di dời văn phòng làm việc doanh nghiệp, căn hộ cao cấp trọn gói ở quy mô nội địa cũng như di chuyển xuyên quốc gia. Là thành viên chính thức của Tổ chức vận chuyển toàn cầu IAM (International Association of Movers), chúng tôi sở hữu mạng lưới đối tác chuyên nghiệp phủ khắp mọi quốc gia.</p><p>Quy trình thực hiện bao gồm việc khảo sát khối lượng chi tiết, lập phương án bọc lót chống trầy xước bằng vật liệu chuyên dụng và vận chuyển an toàn.</p>`
             },
             "dich-vu-luu-kho": {
                 title: "Dịch Vụ Lưu Kho Quản Lý Tiêu Chuẩn Cao",
                 tag: "Dịch vụ hỗ trợ",
                 iconClass: "fa-solid fa-boxes-stacked",
-                image: "/images/dichvu/luukho.png",
+                image: "images/dichvu/luukho.png",
                 highlight: "Hệ thống kho bãi trang bị phần mềm số hóa kiểm soát hàng và PCCC chuẩn quốc gia.",
-                content: `<p>Hệ thống kho bãi lưu kho của chúng tôi được thiết kế kiến trúc xây dựng tại các khu vực có địa hình khô ráo, nền móng cao, bảo đảm tuyệt đối không bị ảnh hưởng bởi triều cường hay ngập lụt do thời tiết biến động.</p>
-                          <p>Kho lưu kho được số hóa bằng việc áp dụng phần mềm quản lý kho thông minh giúp kiểm soát chính xác vị trí ô kệ, ngày nhập xuất và mã pallet của từng kiện hàng. Bên cạnh đó, cụm kho luôn tuân thủ nghiêm ngặt quy trình phun khử trùng định kỳ, trang bị hệ thống camera an ninh vòng ngoài và PCCC chuẩn hóa, sẵn sàng phục vụ lưu kho ngắn hạn, dài hạn hoặc quản lý bảo mật các tệp hồ sơ tài liệu quan trọng của các tập đoàn.</p>`
+                content: `<p>Hệ thống kho bãi lưu kho của chúng tôi được thiết kế kiến trúc xây dựng tại các khu vực có địa hình khô ráo, nền móng cao, bảo đảm tuyệt đối không bị ảnh hưởng bởi triều cường hay ngập lụt.</p><p>Kho lưu kho được số hóa bằng việc áp dụng phần mềm quản lý kho thông minh giúp kiểm soát chính xác vị trí ô kệ, ngày nhập xuất và mã pallet của từng kiện hàng. Bên cạnh đó, cụm kho luôn tuân thủ nghiêm ngặt quy trình phun khử trùng định kỳ.</p>`
             }
         };
+
         const urlParams = new URLSearchParams(window.location.search);
         const serviceKey = urlParams.get('service');
         if (serviceKey && serviceDatabase[serviceKey]) {
             const currentService = serviceDatabase[serviceKey];
-            
             document.title = currentService.title + " - GOLDEN CARGO";
             document.getElementById("srv-title").textContent = currentService.title;
             document.getElementById("srv-tag").textContent = currentService.tag;
@@ -275,11 +264,10 @@
             document.getElementById("srv-content").innerHTML = currentService.content;
             document.getElementById("srv-img").src = currentService.image;
             document.getElementById("srv-img").alt = currentService.title;
-            
             document.getElementById("srv-icon").innerHTML = `<i class="${currentService.iconClass}"></i>`;
         } else {
             document.getElementById("srv-title").textContent = "Dịch vụ không tồn tại";
-            document.getElementById("srv-content").innerHTML = "<p>Rất tiếc, thông tin dịch vụ logistics bạn đang tìm kiếm không tồn tại trên hệ thống hoặc đã được thay đổi đường dẫn. Vui lòng quay lại danh sách dịch vụ.</p>";
+            document.getElementById("srv-content").innerHTML = "<p>Rất tiếc, thông tin dịch vụ logistics bạn đang tìm kiếm không tồn tại trên hệ thống.</p>";
         }
     </script>
 </body>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="/css/about.css">
+<link rel="stylesheet" href="css/about.css">
 <div id="header-placeholder"></div>
 
 <section class="about-section" id="about">
@@ -26,7 +26,7 @@
                     <div class="pulse-ring ring-2"></div>
                     
                     <div class="core-node">
-                        <img src="/images/logo.png" alt="GOLDEN CARGO">
+                        <img src="images/logo.png" alt="GOLDEN CARGO">
                     </div>
 
                     <div class="orbit-track">
@@ -77,7 +77,7 @@
 <div id="footer-placeholder"></div>
 
     <script>
-        fetch('/layout/header.html')
+        fetch('layout/header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
@@ -85,7 +85,7 @@
             .catch(error => console.error('Lỗi khi tải file header:', error));
 
         // Tích hợp Footer
-        fetch('/layout/footer.html')
+        fetch('layout/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
