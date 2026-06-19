@@ -799,3 +799,9 @@ body::after {
     .footer-container { grid-template-columns: 1fr; gap: 40px; }
     .site-footer { padding: 50px 24px 20px 24px; }
 }
+.services-more-btn .btn {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
