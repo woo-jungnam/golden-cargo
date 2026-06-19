@@ -1,5 +1,6 @@
-<header class="logistics-header">
+<header class="logistics-header" id="dynamic-header">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <div class="header-container">
         
         <div class="logo-area">
@@ -10,7 +11,7 @@
 
         <nav class="main-navigator">
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Trang chủ</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="gioithieu.html" class="nav-link">Giới thiệu</a></li>
 
                 <li class="nav-item has-dropdown">
@@ -56,3 +57,48 @@
 
     </div>
 </header>
+
+<script>
+    (function() {
+        const header = document.getElementById('dynamic-header');
+        let lastScrollY = window.scrollY;
+        const headerHeight = 85;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > headerHeight) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+
+            if (currentScrollY > lastScrollY && currentScrollY > headerHeight) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        const currentPath = window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll('.nav-link');
+        let hasActive = false;
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+                hasActive = true;
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        if (!hasActive && (currentPath === "" || currentPath === "index.html")) {
+            const homeLink = document.querySelector('.nav-link[href="index.html"]');
+            if (homeLink) homeLink.classList.add('active');
+        }
+    })();
+</script>

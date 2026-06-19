@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap');
+        
         :root {
             --primary: #0a192f;
             --primary-light: #172a45;
@@ -14,136 +15,261 @@
             --text-main: #0a192f;
             --text-muted: #4a5568;
             --bg-light: #f4f7fa;
-            --bg-card: rgba(255, 255, 255, 0.8);
+            --bg-card: rgba(255, 255, 255, 0.9);
             --transition-curve: cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             color: var(--text-main);
             background-color: var(--bg-light);
             line-height: 1.8;
             overflow-x: hidden;
+            padding-top: 85px;
         }
 
         body::before {
-            content: ''; position: absolute; inset: 0;
+            content: ''; 
+            position: absolute; 
+            inset: 0;
             background-image: radial-gradient(rgba(10, 25, 47, 0.04) 1.2px, transparent 1.2px);
-            background-size: 30px 30px; z-index: -5; pointer-events: none;
+            background-size: 30px 30px; 
+            z-index: -5; 
+            pointer-events: none;
         }
 
-        .detail-container {
-            max-width: 1100px;
-            margin: 60px auto 100px auto;
-            padding: 0 24px;
+        .hero-banner-section {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background-color: var(--primary);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
         }
-        .btn-back {
-            display: inline-flex;
+
+        .hero-bg-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+            filter: scale(1.1);
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.95) 0%, rgba(23, 42, 69, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .hero-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 2;
+        }
+
+        .hero-shape svg {
+            position: relative;
+            display: block;
+            width: calc(130% + 1.3px);
+            height: 60px;
+            transform: rotateY(180deg);
+        }
+
+        .hero-shape .shape-fill {
+            fill: var(--bg-light);
+        }
+
+        .hero-container {
+            position: relative;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 24px;
+            z-index: 3;
+            margin-bottom: 40px;
+        }
+
+        .hero-breadcrumbs {
+            display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .btn-back-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 40px;
             transition: color 0.3s ease;
         }
-        .btn-back:hover { color: var(--accent); }
-        .btn-back i { transition: transform 0.3s var(--transition-curve); }
-        .btn-back:hover i { transform: translateX(-5px); }
-        .detail-wrapper {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            border-radius: 32px;
-            padding: 50px;
-            box-shadow: 0 30px 60px rgba(10, 25, 47, 0.04);
+
+        .btn-back-hero:hover {
+            color: var(--accent);
         }
-        .detail-header {
+
+        .btn-back-hero i {
+            transition: transform 0.3s var(--transition-curve);
+        }
+
+        .btn-back-hero:hover i {
+            transform: translateX(-4px);
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 15px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 800;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+        }
+
+        .hero-title-area {
             display: flex;
             align-items: center;
             gap: 25px;
-            margin-bottom: 35px;
         }
 
-        .detail-icon {
-            width: 75px; height: 75px;
-            background: var(--primary);
+        .hero-icon-box {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
             color: var(--accent);
             border-radius: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 32px;
-            box-shadow: 0 10px 25px rgba(10, 25, 47, 0.15);
+            font-size: 30px;
+            flex-shrink: 0;
         }
 
-        .detail-header-text h1 {
-            font-size: 32px;
+        .hero-title-area h1 {
+            font-size: 38px;
             font-weight: 800;
-            color: var(--primary);
+            color: #ffffff;
             letter-spacing: -0.5px;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .detail-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(255, 183, 3, 0.15);
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: 700;
-            border-radius: 6px;
-            margin-top: 5px;
-            text-transform: uppercase;
+        .detail-container {
+            max-width: 1100px;
+            margin: -80px auto 100px auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
         }
-        .detail-banner {
-            width: 100%;
-            height: 450px;
-            border-radius: 20px;
+
+        .detail-wrapper {
+            background: var(--bg-card);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 32px;
+            padding: 50px;
+            box-shadow: 0 40px 80px rgba(10, 25, 47, 0.06);
+        }
+
+        .feature-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #ffffff;
+            padding: 35px 40px;
+            border-radius: 24px;
+            border-left: 6px solid var(--accent);
+            margin-bottom: 45px;
+            position: relative;
             overflow: hidden;
-            margin-bottom: 40px;
-            box-shadow: 0 15px 35px rgba(10, 25, 47, 0.08);
-            border: 1px solid rgba(10, 25, 47, 0.05);
         }
 
-        .detail-banner img {
-            width: 100%; height: 100%;
-            object-fit: cover;
+        .feature-box::after {
+            content: 'GOLDEN CARGO';
+            position: absolute;
+            right: -20px;
+            bottom: -15px;
+            font-size: 45px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            letter-spacing: 2px;
+            pointer-events: none;
+            user-select: none;
         }
+
+        .feature-box h4 {
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .feature-box p {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         .detail-body-content {
             color: var(--text-muted);
-            font-size: 16.5px;
+            font-size: 17px;
             text-align: justify;
-            margin-bottom: 40px;
         }
 
         .detail-body-content p {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
-        .feature-box {
-            background: var(--primary);
-            color: #ffffff;
-            padding: 30px 40px;
-            border-radius: 20px;
-            border-left: 6px solid var(--accent);
-            margin-bottom: 40px;
+
+        .detail-body-content strong {
+            color: var(--primary);
         }
-        .feature-box h4 {
-            color: var(--accent);
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
         }
+
         @media (max-width: 768px) {
-            .detail-wrapper { padding: 24px; border-radius: 20px; }
-            .detail-banner { height: 260px; }
-            .detail-header { flex-direction: column; align-items: flex-start; gap: 15px; }
-            .detail-header-text h1 { font-size: 24px; }
+            body { padding-top: 85px; }
+            .hero-banner-section { height: 360px; }
+            .hero-title-area { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .hero-title-area h1 { font-size: 26px; }
+            .hero-icon-box { width: 55px; height: 55px; font-size: 24px; border-radius: 14px; }
+            .detail-container { margin-top: -50px; }
+            .detail-wrapper { padding: 28px 20px; border-radius: 24px; }
+            .feature-box { padding: 25px 20px; border-radius: 16px; }
+            .feature-box p { font-size: 15px; }
+            .detail-body-content { font-size: 15.5px; }
         }
     </style>
 </head>
@@ -151,32 +277,44 @@
 
     <div id="header-placeholder"></div>
 
-    <div class="detail-container">
-        <a href="dichvu.html" class="btn-back">
-            <i class="fa-solid fa-arrow-left-long"></i> Quay lại dịch vụ
-        </a>
-
-        <div class="detail-wrapper">
-            <div class="detail-header">
-                <div class="detail-icon" id="srv-icon">
+    <section class="hero-banner-section">
+        <div class="hero-overlay"></div>
+        <img id="hero-srv-bg" class="hero-bg-image" src="" alt="Golden Cargo Fleet">
+        
+        <div class="hero-container">
+            <div class="hero-breadcrumbs">
+                <a href="dichvu.html" class="btn-back-hero">
+                    <i class="fa-solid fa-arrow-left"></i> Dịch vụ của chúng tôi
+                </a>
+            </div>
+            <div class="hero-meta">
+                <span class="hero-tag" id="srv-tag">Logistics</span>
+            </div>
+            <div class="hero-title-area">
+                <div class="hero-icon-box" id="srv-icon">
                     <i class="fa-solid fa-circle-nodes"></i>
                 </div>
-                <div class="detail-header-text">
-                    <h1 id="srv-title">Đang tải dịch vụ...</h1>
-                    <span class="detail-tag" id="srv-tag">Logistics</span>
-                </div>
+                <h1 id="srv-title">Đang tải dữ liệu...</h1>
             </div>
+        </div>
 
-            <div class="detail-banner">
-                <img id="srv-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450' style='background:%23ececec'></svg>" alt="Service Cover Image">
-            </div>
+        <div class="hero-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V1200H1200V195.14C1113.1,179.91,1065.25,113.73,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
+    <div class="detail-container">
+        <div class="detail-wrapper">
+            
             <div class="feature-box">
                 <h4>Thế mạnh ưu tiên từ GOLDEN CARGO</h4>
-                <p id="srv-highlight">Chúng tôi cam kết đảm bảo tiến độ, tối ưu hóa chi phí vận hành và đem lại sự an toàn tuyệt đối cho mọi kiện hàng.</p>
+                <p id="srv-highlight">Chúng tôi cam kết bảo đảm tiến độ tối đa, tối ưu hóa toàn bộ chi phí vận hành và mang lại sự an toàn tuyệt đối cho mọi kiện hàng.</p>
             </div>
 
             <div class="detail-body-content" id="srv-content"></div>
+            
         </div>
     </div>
 
@@ -255,6 +393,7 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const serviceKey = urlParams.get('service');
+        
         if (serviceKey && serviceDatabase[serviceKey]) {
             const currentService = serviceDatabase[serviceKey];
             document.title = currentService.title + " - GOLDEN CARGO";
@@ -262,12 +401,15 @@
             document.getElementById("srv-tag").textContent = currentService.tag;
             document.getElementById("srv-highlight").textContent = currentService.highlight;
             document.getElementById("srv-content").innerHTML = currentService.content;
-            document.getElementById("srv-img").src = currentService.image;
-            document.getElementById("srv-img").alt = currentService.title;
             document.getElementById("srv-icon").innerHTML = `<i class="${currentService.iconClass}"></i>`;
+            
+            const heroBg = document.getElementById("hero-srv-bg");
+            heroBg.src = currentService.image;
+            heroBg.alt = currentService.title;
         } else {
             document.getElementById("srv-title").textContent = "Dịch vụ không tồn tại";
             document.getElementById("srv-content").innerHTML = "<p>Rất tiếc, thông tin dịch vụ logistics bạn đang tìm kiếm không tồn tại trên hệ thống.</p>";
+            document.getElementById("hero-srv-bg").style.display = "none";
         }
     </script>
 </body>

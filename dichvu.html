@@ -11,6 +11,35 @@
 
 <div id="header-placeholder"></div>
 
+<div class="logistic-banner-slider">
+    <div class="slider-wrapper">
+        <div class="slide-item" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.4)), url('images/1.png');">
+            <div class="slide-caption">
+                <span class="caption-tag">Global Network</span>
+                <h2>Vận Tải Quốc Tế Nhanh Chóng</h2>
+            </div>
+        </div>
+        <div class="slide-item" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/2.png');">
+            <div class="slide-caption">
+                <span class="caption-tag">Warehouse & Logistics</span>
+                <h2>Hệ Thống Kho Bãi Hiện Đại</h2>
+            </div>
+        </div>
+        <div class="slide-item" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/4.png');">
+            <div class="slide-caption">
+                <span class="caption-tag">Supply Chain</span>
+                <h2>Chuỗi Cung Ứng Chuẩn Xác</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+</div>
+
 <section class="services-section">
     <div class="services-container">
         <div class="services-header fade-in-up">
@@ -212,6 +241,33 @@
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
         });
     });
+
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    function updateSlider() {
+        const wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlideIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function currentSlide(index) {
+        currentSlideIndex = index;
+        updateSlider();
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+    }
 </script>
 
 </body>

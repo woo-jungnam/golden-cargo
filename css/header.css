@@ -1,30 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
-    --logistics-blue: #0f2c59;      
+    --logistics-blue: #0a192f;      
     --logistics-gold: #ffb703;      
-    --bg-white: #ffffff;
-    --text-dark: #1e293b;          
+    --bg-glass: rgba(255, 255, 255, 0.75);
+    --text-dark: #0a192f;          
     --text-muted: #64748b;         
     --sub-menu-hover: #f8fafc;     
     --ff-inter: 'Inter', sans-serif;
-    --bezier-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bezier-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .logistics-header, .logistics-header * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--ff-inter);
 }
+
 .logistics-header {
-    background-color: var(--bg-white);
+    background-color: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     width: 100%;
     height: 85px;
-    box-shadow: 0 4px 20px rgba(15, 44, 89, 0.06);
-    position: sticky;
+    box-shadow: 0 4px 30px rgba(10, 25, 47, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.logistics-header.header-hidden {
+    transform: translateY(-100%);
+}
+
+.logistics-header.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+}
+
 .header-container {
     max-width: 1320px;
     height: 100%;
@@ -34,6 +51,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .logo-area a {
     display: flex;
     align-items: center;
@@ -75,6 +93,7 @@
     position: relative;
     transition: var(--bezier-smooth);
 }
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -91,41 +110,48 @@
 .nav-link.active::after {
     width: 100%;
 }
+
 .nav-link:hover,
 .nav-link.active {
     color: var(--logistics-blue);
 }
+
 .arrow-icon {
     font-size: 11px;
     margin-left: 3px;
     transition: var(--bezier-smooth);
 }
+
 .nav-item:hover .arrow-icon {
     transform: rotate(180deg);
     color: var(--logistics-gold);
 }
+
 .sub-menu {
     position: absolute;
     top: 100%;
     left: -15px;
-    background-color: var(--bg-white);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     list-style: none;
     min-width: 280px;
     padding: 8px 0;
     border-radius: 0 0 8px 8px;
     border-top: 3px solid var(--logistics-blue);
-    box-shadow: 0 10px 30px rgba(15, 44, 89, 0.12);
-    
+    box-shadow: 0 10px 30px rgba(10, 25, 47, 0.1);
     opacity: 0;
     visibility: hidden;
     transform: translateY(12px);
     transition: var(--bezier-smooth);
 }
+
 .has-dropdown:hover .sub-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
+
 .sub-menu li a {
     text-decoration: none;
     color: var(--text-dark);
@@ -137,6 +163,7 @@
     padding: 12px 20px;
     transition: var(--bezier-smooth);
 }
+
 .sub-menu li a i {
     color: var(--text-muted);
     font-size: 14px;
@@ -154,6 +181,7 @@
 .sub-menu li a:hover i {
     color: var(--logistics-gold);
 }
+
 .header-utilities {
     display: flex;
     align-items: center;
@@ -187,6 +215,7 @@
 .contact-link:hover {
     color: var(--logistics-blue);
 }
+
 .contact-link.phone-highlight {
     font-size: 14px;
     font-weight: 700;
@@ -201,7 +230,7 @@
 .lang-selector {
     display: flex;
     gap: 6px;
-    border-left: 1px solid #e2e8f0;
+    border-left: 1px solid rgba(10, 25, 47, 0.1);
     padding-left: 16px;
     align-items: center;
 }
@@ -212,7 +241,7 @@
     padding: 3px;
     border: 1px solid transparent;
     border-radius: 4px;
-    opacity: 0.4;
+    opacity: 0.5;
     transition: var(--bezier-smooth);
 }
 
@@ -226,8 +255,8 @@
 .lang-option:hover,
 .lang-option.active {
     opacity: 1;
-    background-color: #f1f5f9;
-    border-color: #cbd5e1;
+    background-color: rgba(10, 25, 47, 0.05);
+    border-color: rgba(10, 25, 47, 0.1);
 }
 
 @media (max-width: 1200px) {

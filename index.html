@@ -11,18 +11,47 @@
 
     <div id="header-placeholder"></div>
 
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-shape"></div>
-        <div class="hero-content">
-            <h1>GOLDEN CARGO</h1>
-            <p>Giải pháp hoàn thiện, linh động và hiệu quả trong toàn bộ chuỗi cung ứng toàn cầu.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">Khám Phá Dịch Vụ</a>
-                <a href="tel:+84902722664" class="btn btn-secondary">Liên Hệ Ngay</a>
+    <div class="logistic-banner-slider">
+        <div class="slider-wrapper">
+            <div class="slide-item" style="background-image: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('images/1.png');">
+                <div class="slide-caption">
+                    <span class="caption-tag">Global Network</span>
+                    <h2>GOLDEN CARGO</h2>
+                    <p>Giải pháp hoàn thiện, linh động và hiệu quả trong toàn bộ chuỗi cung ứng toàn cầu.</p>
+                    <div class="hero-buttons" style="margin-top: 25px;">
+                        <a href="#services" class="btn btn-primary" style="margin: 0 12px 0 0;">Khám Phá Dịch Vụ</a>
+                        <a href="tel:+84902722664" class="btn btn-secondary" style="margin: 0;">Liên Hệ Ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item" style="background-image: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('images/2.png');">
+                <div class="slide-caption">
+                    <span class="caption-tag">Warehouse & Logistics</span>
+                    <h2>Hệ Thống Kho Bãi Hiện Đại</h2>
+                    <p>Quản lý và lưu trữ hàng hóa an toàn, chuyên nghiệp với công nghệ số hóa tiên tiến.</p>
+                    <div class="hero-buttons" style="margin-top: 25px;">
+                        <a href="#services" class="btn btn-primary" style="margin: 0 12px 0 0;">Khám Phá Dịch Vụ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item" style="background-image: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('images/4.png');">
+                <div class="slide-caption">
+                    <span class="caption-tag">Supply Chain</span>
+                    <h2>Chuỗi Cung Ứng Chuẩn Xác</h2>
+                    <p>Đảm bảo tiến độ bàn giao chính xác, nâng tầm uy tín doanh nghiệp trên thương trường.</p>
+                    <div class="hero-buttons" style="margin-top: 25px;">
+                        <a href="tel:+84902722664" class="btn btn-primary" style="margin: 0;">Liên Hệ Ngay</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
 
     <section id="about" class="about-section">
         <div class="section-container">
@@ -34,21 +63,25 @@
 
             <div class="about-grid">
                 <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
                     <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
                     <h3>Dịch vụ hoàn chỉnh</h3>
                     <p>GOLDEN CARGO cung cấp cho khách hàng giải pháp hoàn thiện, linh động và hiệu quả trong toàn bộ chuỗi cung ứng.</p>
                 </div>
                 <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
                     <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
                     <h3>Tác phong nghề nghiệp</h3>
                     <p>Đảm bảo phục vụ nhu cầu của khách hàng với tác phong chuyên nghiệp, nỗ lực và tập trung cao nhất.</p>
                 </div>
                 <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
                     <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
                     <h3>Chất lượng quốc tế</h3>
                     <p>Với mạng lưới đối tác uy tín toàn cầu, Chúng tôi đáp ứng nhu cầu vận chuyển của khách hàng đến mọi nơi trên thế giới.</p>
                 </div>
                 <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
                     <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
                     <h3>Đội ngũ kinh nghiệm</h3>
                     <p>Đội ngũ nhân sự nhiều kinh nghiệm, chuyên môn cao và am hiểu sâu về thị trường logistics.</p>
@@ -68,38 +101,38 @@
 
             <div class="services-list">
                 <div id="ocean" class="service-item fade-in-up">
-                    <div class="service-image graphic-shape-1">
+                    <div class="service-image">
                         <img src="images/duongbien.png" alt="Vận chuyển đường biển">
                     </div>
                     <div class="service-info">
                         <div class="service-tag">Giao nhận Quốc Tế</div>
                         <h3>Vận chuyển đường biển</h3>
                         <p>Các thị trường chính bao gồm: Bắc Mỹ, Tây Âu, Úc, Đông Nam Á và Đông Á.</p>
-                        <a href="chi-tiet-dich-vu.html?service=van-chuyen-duong-bien" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="chitietdichvu.html?service=van-chuyen-duong-bien" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div id="air" class="service-item reverse fade-in-up">
-                    <div class="service-image graphic-shape-2">
+                    <div class="service-image">
                         <img src="images/hangkhong.png" alt="Vận chuyển hàng không">
                     </div>
                     <div class="service-info">
                         <div class="service-tag">Ưu thế tốc độ</div>
                         <h3>Vận chuyển hàng không</h3>
                         <p>Giá cước cạnh tranh và luôn giữ chỗ cho khách hàng vào các mùa cao điểm.</p>
-                        <a href="chi-tiet-dich-vu.html?service=van-chuyen-hang-khong" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="chitietdichvu.html?service=van-chuyen-hang-khong" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div id="inland" class="service-item fade-in-up">
-                    <div class="service-image graphic-shape-1">
+                    <div class="service-image">
                         <img src="images/noidia.png" alt="Vận chuyển nội địa">
                     </div>
                     <div class="service-info">
                         <div class="service-tag">Chủ động năng lực</div>
                         <h3>Vận chuyển nội địa</h3>
                         <p>Sở hữu đội ngũ xe tải và container, chủ động cung ứng dịch vụ vận chuyển hàng hóa an toàn.</p>
-                        <a href="chi-tiet-dich-vu.html?service=van-chuyen-noi-dia" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="chitietdichvu.html?service=van-chuyen-noi-dia" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -114,8 +147,8 @@
                 <div class="title-line"></div>
             </div>
             <div class="partners-carousel">
-                    <div class="partners-track">
-                        <div class="partners-slide">
+                <div class="partners-track">
+                    <div class="partners-slide">
                         <div class="partner-item"><img src="images/doitac/apl.png"></div>
                         <div class="partner-item"><img src="images/doitac/hapag.png"></div>
                         <div class="partner-item"><img src="images/doitac/mol.png"></div>
@@ -126,7 +159,7 @@
                         <div class="partner-item"><img src="images/doitac/uasc.png"></div>
                         <div class="partner-item"><img src="images/doitac/yangminh.png"></div>
                     </div>
-                        <div class="partners-slide">
+                    <div class="partners-slide">
                         <div class="partner-item"><img src="images/doitac/apl.png"></div>
                         <div class="partner-item"><img src="images/doitac/hapag.png"></div>
                         <div class="partner-item"><img src="images/doitac/mol.png"></div>
@@ -136,9 +169,9 @@
                         <div class="partner-item"><img src="images/doitac/tsline.png"></div>
                         <div class="partner-item"><img src="images/doitac/uasc.png"></div>
                         <div class="partner-item"><img src="images/doitac/yangminh.png"></div>
-                    </div>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -164,6 +197,49 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.about-card').forEach(card => {
+            const glowMover = card.querySelector('.glow-mover');
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                glowMover.style.left = `${x}px`;
+                glowMover.style.top = `${y}px`;
+                const tiltX = (y - rect.height / 2) / 25;
+                const tiltY = (rect.width / 2 - x) / 25;
+                card.style.transform = `translateY(-10px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `translateY(0) rotateX(0) rotateY(0) scale(1)`;
+            });
+        });
+
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide-item');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        function updateSlider() {
+            const wrapper = document.querySelector('.slider-wrapper');
+            wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            updateSlider();
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
     </script>
 </body>
-</html>
+</html> 
