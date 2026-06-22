@@ -1114,16 +1114,7 @@ body::after {
 }
 
 @media (min-width: 992px) {
-    .process-timeline::before {
-        content: '';
-        position: absolute;
-        top: 35%;
-        left: 50px;
-        right: 50px;
-        height: 2px;
-        background: repeating-linear-gradient(to right, #cbd5e1 0, #cbd5e1 8px, transparent 8px, transparent 16px);
-        z-index: 1;
-    }
+    
 
     .process-step:not(:last-child)::after {
         content: '\f105';
