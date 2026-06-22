@@ -78,6 +78,16 @@
     margin: 0;
 }
 
+.gc-info-item a {
+    color: var(--gc-contact-muted);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.gc-info-item a:hover {
+    color: var(--gc-contact-gold);
+}
+
 .gc-contact-form {
     background: var(--gc-contact-glass);
     backdrop-filter: blur(20px);

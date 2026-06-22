@@ -130,6 +130,17 @@
     line-height:1.7;
 }
 
+.gc-footer-contact a{
+    color:#c6ccd5;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.gc-footer-contact a:hover{
+    color:#ffb703;
+    text-decoration:none;
+}
+
 .gc-footer-contact i{
     width:28px;
     color:#ffb703;

@@ -231,6 +231,13 @@
     transition: var(--bezier-smooth);
 }
 
+.contact-link .text-detail {
+    max-width: 270px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .contact-link i {
     color: var(--text-dark);
     font-size: 13px;
