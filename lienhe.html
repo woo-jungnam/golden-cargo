@@ -11,29 +11,29 @@
 
     <div id="header-placeholder"></div>
 
-    <section class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-info">
+    <section class="gc-contact-section">
+        <div class="gc-contact-grid">
+            <div class="gc-contact-info">
                 <h2>Hãy bắt đầu kết nối với GOLDEN CARGO</h2>
-                <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 16px;">
+                <p class="gc-contact-desc">
                     Chúng tôi luôn sẵn sàng lắng nghe mọi yêu cầu về dịch vụ logistics. Đội ngũ chuyên gia của chúng tôi sẽ phản hồi bạn trong vòng 24h làm việc.
                 </p>
                 
-                <div class="info-item">
+                <div class="gc-info-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <h4>Địa chỉ văn phòng</h4>
                         <p>Quận Thủ Đức, TP. Hồ Chí Minh, Việt Nam</p>
                     </div>
                 </div>
-                <div class="info-item">
+                <div class="gc-info-item">
                     <i class="fa-solid fa-headset"></i>
                     <div>
                         <h4>Hotline hỗ trợ</h4>
                         <p>(+84) 902 722 664</p>
                     </div>
                 </div>
-                <div class="info-item">
+                <div class="gc-info-item">
                     <i class="fa-solid fa-envelope"></i>
                     <div>
                         <h4>Email liên hệ</h4>
@@ -42,15 +42,15 @@
                 </div>
             </div>
 
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Họ và tên của bạn" required>
+            <form class="gc-contact-form" id="contactForm">
+                <div class="gc-form-group">
+                    <input type="text" class="gc-form-control" placeholder="Họ và tên của bạn" required>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Địa chỉ Email" required>
+                <div class="gc-form-group">
+                    <input type="email" class="gc-form-control" placeholder="Địa chỉ Email" required>
                 </div>
-                <div class="form-group">
-                    <select class="form-control">
+                <div class="gc-form-group">
+                    <select class="gc-form-control">
                         <option value="">Chọn dịch vụ cần tư vấn</option>
                         <option value="duong-bien">Vận chuyển đường biển</option>
                         <option value="hang-khong">Vận chuyển hàng không</option>
@@ -59,17 +59,17 @@
                         <option value="khac">Khác</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <textarea class="form-control" rows="5" placeholder="Nội dung cần hỗ trợ..." required></textarea>
+                <div class="gc-form-group">
+                    <textarea class="gc-form-control" rows="5" placeholder="Nội dung cần hỗ trợ..." required></textarea>
                 </div>
-                <button type="submit" class="btn-submit">
+                <button type="submit" class="gc-btn-submit">
                     <span>Gửi yêu cầu ngay</span>
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
             </form>
         </div>
 
-        <div class="map-wrapper">
+        <div class="gc-map-wrapper">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4206639857644!2d106.75168057451829!3d10.855574757724281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752797e51336db%3A0xde25941626eed9b0!2zVGjhu6cgxJDhu6ljLCBIbyBDaGkgTWluaCBDaXR5LCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s" 
                 width="100%" 
@@ -96,13 +96,14 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = this.querySelector('button');
-            btn.innerHTML = 'Đang gửi...';
+            const spanText = btn.querySelector('span');
+            spanText.textContent = 'Đang gửi...';
             btn.style.opacity = '0.7';
             
             setTimeout(() => {
                 alert('Cảm ơn bạn! Yêu cầu của bạn đã được gửi tới GOLDEN CARGO.');
                 this.reset();
-                btn.innerHTML = 'Gửi yêu cầu ngay <i class="fa-solid fa-paper-plane"></i>';
+                spanText.textContent = 'Gửi yêu cầu ngay';
                 btn.style.opacity = '1';
             }, 1500);
         });

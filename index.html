@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Cargo - Giải Pháp Toàn Diện Chuỗi Cung Ứng & Vận Chuyển</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    
+    </script>
 </head>
 <body>
 
-    <div id="header-placeholder"></div>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
 
-    <div class="logistic-banner-slider">
+    <main>
+    <section class="logistic-banner-slider" aria-label="Banner trang chủ Golden Cargo">
         <div class="slider-wrapper">
-            <div class="slide-item" style="background-image: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('images/1.png');">
+            <div class="slide-item" style="background-image: linear-gradient(110deg, rgba(7, 20, 40, 0.88), rgba(7, 20, 40, 0.62)), url('images/1.png');">
                 <div class="slide-caption">
-                    <span class="caption-tag">Global Network</span>
-                    <h2>GOLDEN CARGO</h2>
-                    <p>Giải pháp hoàn thiện, linh động và hiệu quả trong toàn bộ chuỗi cung ứng toàn cầu.</p>
-                    <div class="hero-buttons" style="margin-top: 25px;">
-                        <a href="#services" class="btn btn-primary" style="margin: 0 12px 0 0;">Khám Phá Dịch Vụ</a>
-                        <a href="tel:+84902722664" class="btn btn-secondary" style="margin: 0;">Liên Hệ Ngay</a>
+                    <span class="caption-tag">Global Logistics Partner</span>
+                    <h1>GOLDEN CARGO</h1>
+                    <p>Giải pháp logistics toàn cầu cho vận chuyển quốc tế, kho bãi và chuỗi cung ứng của doanh nghiệp xuất nhập khẩu.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Khám phá dịch vụ</a>
+                        <a href="tel:+84902722664" class="btn btn-secondary">Tư vấn ngay</a>
                     </div>
                 </div>
             </div>
-            <div class="slide-item" style="background-image: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('images/2.png');">
+            <div class="slide-item" style="background-image: linear-gradient(110deg, rgba(7, 20, 40, 0.86), rgba(7, 20, 40, 0.6)), url('images/2.png');">
                 <div class="slide-caption">
                     <span class="caption-tag">Warehouse & Logistics</span>
                     <h2>Hệ Thống Kho Bãi Hiện Đại</h2>
                     <p>Quản lý và lưu trữ hàng hóa an toàn, chuyên nghiệp với công nghệ số hóa tiên tiến.</p>
-                    <div class="hero-buttons" style="margin-top: 25px;">
-                        <a href="#services" class="btn btn-primary" style="margin: 0 12px 0 0;">Khám Phá Dịch Vụ</a>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Khám phá dịch vụ</a>
                     </div>
                 </div>
             </div>
-            <div class="slide-item" style="background-image: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('images/4.png');">
+            <div class="slide-item" style="background-image: linear-gradient(110deg, rgba(7, 20, 40, 0.86), rgba(7, 20, 40, 0.58)), url('images/4.png');">
                 <div class="slide-caption">
                     <span class="caption-tag">Supply Chain</span>
                     <h2>Chuỗi Cung Ứng Chuẩn Xác</h2>
                     <p>Đảm bảo tiến độ bàn giao chính xác, nâng tầm uy tín doanh nghiệp trên thương trường.</p>
-                    <div class="hero-buttons" style="margin-top: 25px;">
-                        <a href="tel:+84902722664" class="btn btn-primary" style="margin: 0;">Liên Hệ Ngay</a>
+                    <div class="hero-buttons">
+                        <a href="tel:+84902722664" class="btn btn-primary">Liên hệ ngay</a>
                     </div>
                 </div>
             </div>
@@ -51,137 +59,453 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
         </div>
-    </div>
+    </section>
 
-    <section id="about" class="about-section">
-        <div class="section-container">
-            <div class="section-header fade-in-up">
-                <span class="sub-title">Vì sao chọn chúng tôi</span>
-                <h2>Giới Thiệu Về Chúng Tôi</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-card fade-in-up">
-                    <div class="glow-mover"></div>
-                    <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
-                    <h3>Dịch vụ hoàn chỉnh</h3>
-                    <p>GOLDEN CARGO cung cấp cho khách hàng giải pháp hoàn thiện, linh động và hiệu quả trong toàn bộ chuỗi cung ứng.</p>
+    <section class="stats-counter-section fade-in-up" style="background: #f8f9fa; padding: 40px 0; border-bottom: 1px solid #eee;">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3">
+                    <h3 style="color: #071428; font-weight: bold; font-size: 2.5rem;">10+</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Năm Kinh Nghiệm</p>
                 </div>
-                <div class="about-card fade-in-up">
-                    <div class="glow-mover"></div>
-                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
-                    <h3>Tác phong nghề nghiệp</h3>
-                    <p>Đảm bảo phục vụ nhu cầu của khách hàng với tác phong chuyên nghiệp, nỗ lực và tập trung cao nhất.</p>
+                <div class="col-6 col-md-3 mb-3">
+                    <h3 style="color: #071428; font-weight: bold; font-size: 2.5rem;">5,000+</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Lô Hàng Hoàn Thành</p>
                 </div>
-                <div class="about-card fade-in-up">
-                    <div class="glow-mover"></div>
-                    <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
-                    <h3>Chất lượng quốc tế</h3>
-                    <p>Với mạng lưới đối tác uy tín toàn cầu, Chúng tôi đáp ứng nhu cầu vận chuyển của khách hàng đến mọi nơi trên thế giới.</p>
+                <div class="col-6 col-md-3 mb-3">
+                    <h3 style="color: #071428; font-weight: bold; font-size: 2.5rem;">200+</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Đối Tác Toàn Cầu</p>
                 </div>
-                <div class="about-card fade-in-up">
-                    <div class="glow-mover"></div>
-                    <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
-                    <h3>Đội ngũ kinh nghiệm</h3>
-                    <p>Đội ngũ nhân sự nhiều kinh nghiệm, chuyên môn cao và am hiểu sâu về thị trường logistics.</p>
+                <div class="col-6 col-md-3 mb-3">
+                    <h3 style="color: #071428; font-weight: bold; font-size: 2.5rem;">99%</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Khách Hàng Hài Lòng</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SECTION 3: VỀ CHÚNG TÔI (Đẩy lên trước Dịch vụ để Google bot hiểu rõ thực thể doanh nghiệp trước) -->
+    <section class="about-section" id="about">
+        <div class="section-container compact-section">
+            <div class="section-header fade-in-up">
+                <span class="sub-title">Hành trình phát triển</span>
+                <h2>Về Chúng Tôi</h2>
+                <div class="title-line"></div>
+                <p class="section-desc">Golden Cargo kết nối năng lực vận tải, kho bãi và khai báo hải quan để hàng hóa được vận hành rõ ràng, đúng tiến độ và tối ưu chi phí.</p>
+            </div>
+
+            <div class="about-hero-grid fade-in-up">
+                <div class="about-hero-text">
+                    <div class="company-badge">Công Ty TNHH GOLDEN CARGO</div>
+                    <h3>Giải Pháp Vận Tải Toàn Diện <br><span>Đáp ứng nhu cầu tăng trưởng toàn cầu</span></h3>
+                    <p>GOLDEN CARGO là doanh nghiệp tiên phong chuyên đáp ứng các nhu cầu vận chuyển hàng hóa phức tạp của khách hàng toàn quốc và quốc tế. Bất kể bạn ở đâu, chỉ cần kết nối, chúng tôi luôn sẵn sàng đáp ứng với tốc độ nhanh nhất, uy tín tuyệt đối và niềm tin chất lượng vững chắc.</p>
+                    <p>Bằng việc vận hành trang thiết bị hiện đại kết hợp với quy trình quản lý sản xuất chuyên nghiệp, đội ngũ kỹ thuật lành nghề của chúng tôi cam kết mang đến những dịch vụ đỉnh cao, đảm bảo chính xác tiến độ giao hàng với tối ưu hóa chi phí.</p>
+                </div>
+                
+                <div class="vision-graphic-block">
+                    <div class="network-globe-box">
+                        <div class="pulse-ring ring-1"></div>
+                        <div class="pulse-ring ring-2"></div>
+                        <div class="core-node">
+                            <img src="images/logo.png" alt="GOLDEN CARGO">
+                        </div>
+                        <div class="orbit-track">
+                            <div class="satellite-node" style="--i: 1;" title="Đối tác Vận tải"><i class="fas fa-truck"></i></div>
+                            <div class="satellite-node" style="--i: 2;" title="Hãng tàu Chiến lược"><i class="fas fa-ship"></i></div>
+                            <div class="satellite-node" style="--i: 3;" title="Cảng hàng không"><i class="fas fa-plane"></i></div>
+                            <div class="satellite-node" style="--i: 4;" title="Quản lý kho bãi"><i class="fas fa-warehouse"></i></div>
+                            <div class="satellite-node" style="--i: 5;" title="Chuỗi cung ứng toàn cầu"><i class="fas fa-globe"></i></div>
+                            <div class="satellite-node" style="--i: 6;" title="Giải pháp số hóa"><i class="fas fa-network-wired"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-values-grid">
+                <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
+                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Chuyên Môn Hóa</h3>
+                    <p>Sự tách biệt độc lập nhưng liên kết chặt chẽ trong từng bộ phận. Mỗi mắt xích trong chuỗi cung ứng đều vận hành với độ chính xác tuyệt đối.</p>
+                </div>
+                <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div> <!-- Sửa lỗi class fa-shield-halved thành fa-shield-alt phù hợp font-awesome 5 -->
+                    <h3>Trách Nhiệm Cao</h3>
+                    <p>Đội ngũ giám sát kỹ thuật làm việc nghiêm túc, cẩn thận và kỷ luật thép, đảm bảo an toàn cho sản phẩm hoàn thiện đến từng chi tiết nhỏ nhất.</p>
+                </div>
+                <div class="about-card fade-in-up">
+                    <div class="glow-mover"></div>
+                    <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Sáng Tạo Liên Tục</h3>
+                    <p>Các bộ phận thường xuyên trao đổi, chia sẻ sáng kiến xây dựng nên một hệ sinh thái GOLDEN CARGO năng động, đột phá trong từng dự án.</p>
+                </div>
+            </div>
+
+            <div class="about-motto-banner fade-in-up">
+                <div class="motto-content">
+                    <div class="motto-quote">“ Hợp tác để cùng thành công ” & “ Liên tục cải tiến ”</div>
+                    <p>Sự tin tưởng và ủng hộ của khách hàng trong suốt thời gian qua là nguồn động viên to lớn trên bước đường phát triển của GOLDEN CARGO. Chúng tôi cam kết không ngừng hoàn thiện, nâng cấp cả về nhân lực lẫn vật lực để phục vụ tốt nhất, xứng đáng với niềm tin ấy.</p>
+                    <div class="motto-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: DỊCH VỤ LOGISTICS CHÍNH -->
     <section id="services" class="services-section">
-        <div class="section-container">
+        <div class="section-container compact-section">
             <div class="section-header fade-in-up">
                 <span class="sub-title">Lĩnh vực hoạt động</span>
-                <h2>Các Dịch Vụ Chính</h2>
+                <h2>Dịch Vụ Logistics Chính</h2>
                 <div class="title-line"></div>
-                <p class="section-desc">GOLDEN CARGO chuyên về dịch vụ giao nhận, vận chuyển hàng hóa Quốc Tế.</p>
+                <p class="section-desc">GOLDEN CARGO chuyên về giao nhận, vận chuyển hàng hóa quốc tế và giải pháp chuỗi cung ứng cho doanh nghiệp.</p>
             </div>
 
             <div class="services-list">
                 <div id="ocean" class="service-item fade-in-up">
                     <div class="service-image">
-                        <img src="images/duongbien.png" alt="Vận chuyển đường biển">
+                        <img src="images/duongbien.png" alt="Dịch vụ Vận chuyển đường biển quốc tế - Golden Cargo">
                     </div>
                     <div class="service-info">
                         <div class="service-tag">Giao nhận Quốc Tế</div>
                         <h3>Vận chuyển đường biển</h3>
                         <p>Các thị trường chính bao gồm: Bắc Mỹ, Tây Âu, Úc, Đông Nam Á và Đông Á.</p>
-                        <a href="chitietdichvu.html?service=van-chuyen-duong-bien" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="chitietdichvu.html?service=van-chuyen-duong-bien" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div id="air" class="service-item reverse fade-in-up">
                     <div class="service-image">
-                        <img src="images/hangkhong.png" alt="Vận chuyển hàng không">
+                        <img src="images/hangkhong.png" alt="Dịch vụ Vận chuyển hàng không siêu tốc - Golden Cargo">
                     </div>
                     <div class="service-info">
                         <div class="service-tag">Ưu thế tốc độ</div>
                         <h3>Vận chuyển hàng không</h3>
                         <p>Giá cước cạnh tranh và luôn giữ chỗ cho khách hàng vào các mùa cao điểm.</p>
-                        <a href="chitietdichvu.html?service=van-chuyen-hang-khong" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="chitietdichvu.html?service=van-chuyen-hang-khong" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div id="inland" class="service-item fade-in-up">
                     <div class="service-image">
-                        <img src="images/noidia.png" alt="Vận chuyển nội địa">
+                        <img src="images/noidia.png" alt="Dịch vụ Vận chuyển nội địa đường bộ - Golden Cargo">
                     </div>
                     <div class="service-info">
                         <div class="service-tag">Chủ động năng lực</div>
                         <h3>Vận chuyển nội địa</h3>
                         <p>Sở hữu đội ngũ xe tải và container, chủ động cung ứng dịch vụ vận chuyển hàng hóa an toàn.</p>
-                        <a href="chitietdichvu.html?service=van-chuyen-noi-dia" class="read-more">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="chitietdichvu.html?service=van-chuyen-noi-dia" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="services-more-btn fade-in-up" style="text-align: center; margin-top: 50px;">
                 <a href="dichvu.html" class="btn btn-primary">
-                    Xem tất cả dịch vụ <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                    Xem tất cả dịch vụ <i class="fas fa-arrow-right" style="margin-left: 8px;"></i> <!-- Đồng bộ font-awesome 5 -->
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="partners" class="partners-section fade-in-up">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="sub-title">Sự tin tưởng toàn cầu</span>
-                <h2>Đối Tác Thân Thuộc</h2>
+    <section id="process" class="process-section">
+        <div class="section-container compact-section">
+            <div class="section-header fade-in-up">
+                <span class="sub-title">Quy trình vận hành</span>
+                <h2>5 Bước Xử Lý Lô Hàng</h2>
                 <div class="title-line"></div>
+                <p class="section-desc">Quy trình minh bạch giúp khách hàng nắm rõ tiến độ từ lúc tiếp nhận yêu cầu đến khi hàng hóa được bàn giao.</p>
             </div>
-            <div class="partners-carousel">
-                <div class="partners-track">
-                    <div class="partners-slide">
-                        <div class="partner-item"><img src="images/doitac/apl.png"></div>
-                        <div class="partner-item"><img src="images/doitac/hapag.png"></div>
-                        <div class="partner-item"><img src="images/doitac/mol.png"></div>
-                        <div class="partner-item"><img src="images/doitac/msc.png"></div>
-                        <div class="partner-item"><img src="images/doitac/oocl.png"></div>
-                        <div class="partner-item"><img src="images/doitac/pil.png"></div>
-                        <div class="partner-item"><img src="images/doitac/tsline.png"></div>
-                        <div class="partner-item"><img src="images/doitac/uasc.png"></div>
-                        <div class="partner-item"><img src="images/doitac/yangminh.png"></div>
+
+            <div class="process-timeline row no-gutters">
+                <div class="col-lg col-md-6 process-step fade-in-up">
+                    <div class="process-card h-100">
+                        <span class="step-number">01</span>
+                        <i class="fas fa-comments"></i>
+                        <h3>Tư vấn tuyến</h3>
+                        <p>Tiếp nhận thông tin hàng hóa, điểm đi, điểm đến và thời gian mong muốn.</p>
                     </div>
-                    <div class="partners-slide">
-                        <div class="partner-item"><img src="images/doitac/apl.png"></div>
-                        <div class="partner-item"><img src="images/doitac/hapag.png"></div>
-                        <div class="partner-item"><img src="images/doitac/mol.png"></div>
-                        <div class="partner-item"><img src="images/doitac/msc.png"></div>
-                        <div class="partner-item"><img src="images/doitac/oocl.png"></div>
-                        <div class="partner-item"><img src="images/doitac/pil.png"></div>
-                        <div class="partner-item"><img src="images/doitac/tsline.png"></div>
-                        <div class="partner-item"><img src="images/doitac/uasc.png"></div>
-                        <div class="partner-item"><img src="images/doitac/yangminh.png"></div>
+                </div>
+                <div class="col-lg col-md-6 process-step fade-in-up">
+                    <div class="process-card h-100">
+                        <span class="step-number">02</span>
+                        <i class="fas fa-file-signature"></i>
+                        <h3>Báo giá</h3>
+                        <p>Đề xuất phương án vận chuyển, chi phí và điều kiện dịch vụ phù hợp.</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 process-step fade-in-up">
+                    <div class="process-card h-100">
+                        <span class="step-number">03</span>
+                        <i class="fas fa-boxes"></i>
+                        <h3>Nhận hàng</h3>
+                        <p>Sắp xếp xe, kho bãi, booking và chứng từ để hàng được xử lý đúng lịch.</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 process-step fade-in-up">
+                    <div class="process-card h-100">
+                        <span class="step-number">04</span>
+                        <i class="fas fa-route"></i>
+                        <h3>Theo dõi</h3>
+                        <p>Cập nhật trạng thái vận chuyển, hỗ trợ phát sinh và kiểm soát tiến độ.</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 process-step fade-in-up">
+                    <div class="process-card h-100">
+                        <span class="step-number">05</span>
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Bàn giao</h3>
+                        <p>Hoàn tất giao hàng, đối soát chứng từ và hỗ trợ sau vận chuyển.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-container compact-section">
+            <div class="section-header fade-in-up">
+                <span class="sub-title">Đánh giá khách hàng</span>
+                <h2>Doanh Nghiệp Tin Chọn Golden Cargo</h2>
+                <div class="title-line"></div>
+                <p class="section-desc">Những phản hồi thực tế từ khách hàng sử dụng dịch vụ vận chuyển quốc tế, nội địa và kho bãi.</p>
+            </div>
 
+            <div class="row testimonial-grid">
+                <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                    <article class="testimonial-card h-100">
+                        <div class="testimonial-rating" aria-label="5 sao">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>“Golden Cargo xử lý booking nhanh, thông tin rõ ràng và hỗ trợ chứng từ rất sát. Chúng tôi yên tâm hơn trong các lô hàng đi châu Âu.”</p>
+                        <div class="testimonial-author">
+                            <strong>Nguyễn Minh Anh</strong>
+                            <span>Import Manager, FMCG</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                    <article class="testimonial-card h-100">
+                        <div class="testimonial-rating" aria-label="5 sao">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>“Đội ngũ phản hồi nhanh, báo tiến độ đều và chủ động cảnh báo khi lịch tàu thay đổi. Dịch vụ phù hợp cho doanh nghiệp cần sự ổn định.”</p>
+                        <div class="testimonial-author">
+                            <strong>Trần Quốc Huy</strong>
+                            <span>Supply Chain Lead, Manufacturing</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 fade-in-up">
+                    <article class="testimonial-card h-100">
+                        <div class="testimonial-rating" aria-label="5 sao">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>“Kho bãi và vận chuyển nội địa phối hợp mượt, giúp chúng tôi rút ngắn thời gian gom hàng trước khi xuất khẩu.”</p>
+                        <div class="testimonial-author">
+                            <strong>Lê Thanh Thảo</strong>
+                            <span>Operations Director, Exporter</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="partners-section fade-in-up">
+        <div class="section-container compact-section">
+            <div class="section-header">
+                <span class="sub-title">Sự tin tưởng toàn cầu</span>
+                <h2>Mạng Lưới Đối Tác</h2>
+                <div class="title-line"></div>
+                <p class="section-desc">Kết nối cùng các hãng tàu và đối tác vận tải quốc tế giúp Golden Cargo chủ động năng lực giao nhận trên nhiều tuyến.</p>
+            </div>
+            <div class="partners-carousel">
+                <div class="partners-track">
+                    <div class="partners-slide">
+                        <div class="partner-item"><img src="images/doitac/apl.png" alt="Hãng tàu đối tác APL"></div>
+                        <div class="partner-item"><img src="images/doitac/hapag.png" alt="Hãng tàu đối tác Hapag-Lloyd"></div>
+                        <div class="partner-item"><img src="images/doitac/mol.png" alt="Hãng tàu đối tác MOL"></div>
+                        <div class="partner-item"><img src="images/doitac/msc.png" alt="Hãng tàu đối tác MSC"></div>
+                        <div class="partner-item"><img src="images/doitac/oocl.png" alt="Hãng tàu đối tác OOCL"></div>
+                        <div class="partner-item"><img src="images/doitac/pil.png" alt="Hãng tàu đối tác PIL"></div>
+                        <div class="partner-item"><img src="images/doitac/tsline.png" alt="Hãng tàu đối tác TS Lines"></div>
+                        <div class="partner-item"><img src="images/doitac/uasc.png" alt="Hãng tàu đối tác UASC"></div>
+                        <div class="partner-item"><img src="images/doitac/yangminh.png" alt="Hãng tàu đối tác Yang Ming"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: TIN TỨC & SỰ KIỆN -->
+    <section id="home-news" class="home-news-section">
+        <div class="section-container compact-section">
+            <div class="section-header fade-in-up">
+                <span class="sub-title">Thông tin mới nhất</span>
+                <h2>Tin Tức Ngành Logistics</h2>
+                <div class="title-line"></div>
+                <p class="section-desc">Cập nhật xu hướng thị trường, thông tin vận tải toàn cầu và các hoạt động từ Golden Cargo.</p>
+            </div>
+
+            <div class="news-grid-layout">
+                <div class="news-card-3d fade-in-up">
+                    <div class="card-glow-effect"></div>
+                    <div class="news-card-inner">
+                        <div class="news-media-box">
+                            <img src="images/tintuc/featured.png" alt="Xu hướng logistics xanh năm 2026">
+                            <div class="media-overlay"></div>
+                            <span class="category-pill">Xu Hướng</span>
+                        </div>
+                        <div class="news-info-box">
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar"></i> 18 Tháng 6, 2026</span>
+                            </div>
+                            <h3>Tầm Nhìn Logistics Xanh 2026: Trọng Tâm Số Hóa Chuỗi Cung Ứng</h3>
+                            <p>Ngành vận tải toàn cầu chứng kiến bước chuyển mình mạnh mẽ khi các tiêu chuẩn xanh hóa được áp dụng diện rộng...</p>
+                            <a href="tintuc.html" class="read-more-modern">
+                                <span>Xem chi tiết</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-card-3d fade-in-up">
+                    <div class="card-glow-effect"></div>
+                    <div class="news-card-inner">
+                        <div class="news-media-box">
+                            <img src="images/tintuc/news1.png" alt="Cập nhật giá cước vận tải biển toàn cầu">
+                            <div class="media-overlay"></div>
+                            <span class="category-pill">Vận Tải Biển</span>
+                        </div>
+                        <div class="news-info-box">
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar"></i> 15 Tháng 6, 2026</span>
+                            </div>
+                            <h3>Cập Nhật Tình Hình Giá Cước Vận Tải Tuyến Mỹ - Âu Tuần Này</h3>
+                            <p>Phân tích biến động giá container và xu hướng giữ chỗ của các hãng tàu lớn trước khi bước vào mùa cao điểm xuất khẩu.</p>
+                            <a href="tintuc.html" class="read-more-modern">
+                                <span>Xem chi tiết</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-card-3d fade-in-up">
+                    <div class="card-glow-effect"></div>
+                    <div class="news-card-inner">
+                        <div class="news-media-box">
+                            <img src="images/tintuc/news2.png" alt="Kho bãi mới của Golden Cargo tại Bình Dương">
+                            <div class="media-overlay"></div>
+                            <span class="category-pill">Thông Báo</span>
+                        </div>
+                        <div class="news-info-box">
+                            <div class="news-meta">
+                                <span><i class="far fa-calendar"></i> 10 Tháng 6, 2026</span>
+                            </div>
+                            <h3>Golden Cargo Khai Trương Hệ Thống Kho Bãi Mới Tại Bình Dương</h3>
+                            <p>Nâng cấp năng lực lưu trữ lưu kho và hoàn thiện đơn hàng với hệ thống quản lý thông minh tại trung tâm phía Nam.</p>
+                            <a href="tintuc.html" class="read-more-modern">
+                                <span>Xem chi tiết</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-more-btn fade-in-up" style="text-align: center; margin-top: 50px;">
+                <a href="tintuc.html" class="btn btn-primary">
+                    Xem tất cả bài viết <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section fade-in-up" style="padding: 60px 0; background: #fff;">
+        <div class="section-container compact-section container">
+            <div class="section-header text-center mb-5">
+                <span class="sub-title" style="color: #007bff; font-weight: bold; text-transform: uppercase;">Giải đáp nhanh</span>
+                <h2>Câu Hỏi Thường Gặp</h2>
+                <div class="title-line" style="width: 50px; height: 3px; background: #007bff; margin: 15px auto;"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="card mb-3" style="border: 1px solid #eee;">
+                            <div class="card-header bg-white" id="faq1">
+                                <h4 class="mb-0" style="font-size: 1.1rem;">
+                                    <button class="btn btn-link text-dark text-left w-100 font-weight-bold" type="button" data-toggle="collapse" data-target="#collapse1">
+                                        Golden Cargo vận chuyển hàng hóa đi những thị trường nào?
+                                    </button>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="collapse show" data-parent="#faqAccordion">
+                                <div class="card-body" style="color: #666;">
+                                    Chúng tôi mạnh về các tuyến quốc tế đi Bắc Mỹ, Tây Âu, Úc, Đông Nam Á và Đông Á, kết hợp mạng lưới vận tải nội địa phủ khắp Việt Nam.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="border: 1px solid #eee;">
+                            <div class="card-header bg-white" id="faq2">
+                                <h4 class="mb-0" style="font-size: 1.1rem;">
+                                    <button class="btn btn-link text-dark text-left w-100 font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapse2">
+                                        Thời gian nhận báo giá lô hàng là bao lâu?
+                                    </button>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body" style="color: #666;">
+                                    Đối với các tuyến nội địa và hàng không thông thường, chúng tôi sẽ phản hồi báo giá trong vòng 1-2 giờ làm việc. Tuyến đường biển phức tạp sẽ từ 4-8 giờ.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === BỔ SUNG SECTION 10: FORM ĐĂNG KÝ TƯ VẤN / BÁO GIÁ (CTA SECTION) === -->
+    <!-- Lý do SEO & Khách hàng: Thu thập Lead (Chuyển đổi conversion rate) và giữ chân người dùng hoàn thành một hành động, tín hiệu cực tốt cho SEO -->
+    <section id="cta-contact" class="cta-contact-section fade-in-up" style="background: linear-gradient(135deg, #071420 0%, #0d2540 100%); padding: 60px 0; color: #fff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="font-weight-bold" style="font-size: 2.2rem;">Yêu Cầu Báo Giá Lô Hàng Ngay Hôm Nay?</h2>
+                    <p class="text-white-50 mt-3">Để lại thông tin, đội ngũ chuyên viên logistics của Golden Cargo sẽ liên hệ tư vấn phương án tối ưu chi phí nhất cho doanh nghiệp của bạn.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form action="#" method="POST" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Họ và tên *" required style="background: rgba(255,255,255,0.1); border: none; color: #fff;">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" placeholder="Số điện thoại *" required style="background: rgba(255,255,255,0.1); border: none; color: #fff;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email liên hệ" style="background: rgba(255,255,255,0.1); border: none; color: #fff;">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Thông tin sơ lược lô hàng (Trọng lượng, Điểm đi - Điểm đến...)" style="background: rgba(255,255,255,0.1); border: none; color: #fff;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;">Gửi Yêu Cầu Khẩn Cấp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function loadComponent(id, file) {
             fetch(file)
@@ -209,8 +533,10 @@
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                glowMover.style.left = `${x}px`;
-                glowMover.style.top = `${y}px`;
+                if(glowMover) {
+                    glowMover.style.left = `${x}px`;
+                    glowMover.style.top = `${y}px`;
+                }
                 const tiltX = (y - rect.height / 2) / 25;
                 const tiltY = (rect.width / 2 - x) / 25;
                 card.style.transform = `translateY(-10px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
@@ -228,7 +554,9 @@
 
         function updateSlider() {
             const wrapper = document.querySelector('.slider-wrapper');
-            wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            if(wrapper) {
+                wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            }
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlideIndex);
             });
@@ -247,4 +575,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
